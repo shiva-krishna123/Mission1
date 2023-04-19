@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;/*To implement Box Model*/
+}
+/*Global Style*/
+body{
+    font-family: Merriweather,sans-serif;/* choose font as merriweather if not available then sans-serif*/
+    background-color: #ebf2ff;/*Background colour for entire screen is white*/
+    overflow-x:hidden;/*to avoid overflow of button*/
+}
+.button_primary{
+    /* we use background-image since background-color does not support gradient*/
+    background-image: linear-gradient(
+        to right,
+        #ff512f 0%
+        #dd2476 51%
+        #ff512f 100%
+    );
+    color: #fff;/*Button text color*/
+    padding :12px;/*inner space*/
+    border: none;/* no border*/
+    border-radius: 6px;
+
+}
+.container{
+    width: 100%;
+    margin :0 auto;
+    padding: 0 15px;
+}
+
+/*lets style navbar*/
+.navbar{
+    display:flex;/*to display side by side*/
+    justify-content: space-around;
+    align-items:Center;
+}
+.navbar_brand{
+    width: 100px;
+}
+.navbar_logo{
+    width: 100%;
+}
+.hero_container{
+    width:100%;
+}
+.hero_img_container{
+    width:100%;
+}
+.hero_img{
+    width:100%;
+}
+/* let us write media queries for tablet,pc and laptop screens*/
+@media(min-width:768px){
+    .navbar{
+        justify-content: space-between;
+        padding : 10px 20px;/* top&bootom  left&right*/
+    }
+    .navbar_brand{
+        width:150px;
+    }
+    .button_primary{
+        padding:20px;
+        font-size: 20px;;
+    }
+    .hero_container{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+}
+@media(min-width:1020px){
+    .container{
+        max-width: 1010px;
+    }
+    .hero_img_container{
+        width: 500px;
+        height: 500px;
+    }
+}
