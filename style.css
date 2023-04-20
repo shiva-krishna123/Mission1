@@ -54,15 +54,37 @@ body{
     font-size: 30px;
     font-weight: bold;/*Make bold*/
     color: #1d3557;/*change text colour*/
-    margin: 10px 0;/* To create 20px space between image and content as well as button and content from top to bottom of size 20px*/
+    margin: 20px 0;/* To create 20px space between image and content as well as button and content from top to bottom of size 20px*/
 }
 
 /*Menu Styles*/
+.explore_menu_container{
+  margin-top: 50px; /* to have space/gap between text and button in the hero section*/ 
+}
+.explore_menu_text{
+    font-size: 30px;
+    font-weight: bold;/*Make bold*/
+    color: #1d3557;/*change text colour*/
+    margin: 20px 0;/* To create 20px space between image and content as well as button and content from top to bottom of size 20px*/
+    text-align: center;
+}
 .food_menu_card{
     width: 100%; /* To fix overlapping image*/
+    background-color: #fff;
+    border-radius: 8px;/* also add border-radius for image as well*/
+    margin-bottom: 15px;/*food menu cards are attached to one another to avoid this we use margin bottom of 15px*/
 }
 .food_image{
     width: 100%;
+    /* i dont need border-radius for leftbottom and rightbottom*/
+    border-radius: 8px 8px 0 0;/*topleft righttop leftbottom rightbottom*/
+}
+.food_menu_card_discription{
+    padding: 20px;/* to provide space between content and image inside menu card*/
+}
+.explore_menu_view_more{
+    display: flex;
+    justify-content: center;
 }
 /* let us write media queries for tablet,pc and laptop screens*/
 @media(min-width:768px){
