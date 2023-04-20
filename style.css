@@ -14,14 +14,14 @@ body{
     background-image: linear-gradient(
         to right,
         #ff512f 0%,
-    #dd2476 51%,
-    #ff512f 100%
+        #dd2476 51%,
+        #ff512f 100%
     );
     color: #fff;/*Button text color*/
     padding :12px;/*inner space*/
     border: none;/* no border*/
     border-radius: 6px;
-
+    cursor: pointer;
 }
 .container{
     width: 100%;
@@ -50,6 +50,20 @@ body{
 .hero_img{
     width:100%;
 }
+.hero_txt{/* To make text to have more font size and bold*/
+    font-size: 30px;
+    font-weight: bold;/*Make bold*/
+    color: #1d3557;/*change text colour*/
+    margin: 10px 0;/* To create 20px space between image and content as well as button and content from top to bottom of size 20px*/
+}
+
+/*Menu Styles*/
+.food_menu_card{
+    width: 100%; /* To fix overlapping image*/
+}
+.food_image{
+    width: 100%;
+}
 /* let us write media queries for tablet,pc and laptop screens*/
 @media(min-width:768px){
     .navbar{
@@ -60,8 +74,8 @@ body{
         width:150px;
     }
     .button_primary{
-        padding:20px;
-        font-size: 20px;;
+        padding:12px 20px;/* now button is perfect*/
+        font-size: 20px;
     }
     .hero_container{
         display: flex;
@@ -74,10 +88,16 @@ body{
 }
 @media(min-width:1020px){
     .container{
-        max-width: 1010px;
+        max-width: 900px;
     }
-    .hero_img_container{
-        width: 500px;
-        height: 500px;
+    
+    .hero_txt{
+        font-size: 50px;;
+    }
+}
+@media(min-width:1200px)
+{
+    .container{
+        max-width: 1250px;
     }
 }
