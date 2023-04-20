@@ -5,7 +5,7 @@
 }
 /*Global Style*/
 body{
-    font-family: Merriweather,sans-serif;/* choose font as merriweather if not available then sans-serif*/
+    font-family:" Merriweather",sans-serif;
     background-color: #ebf2ff;/*Background colour for entire screen is white*/
     overflow-x:hidden;/*to avoid overflow of button*/
 }
@@ -13,9 +13,9 @@ body{
     /* we use background-image since background-color does not support gradient*/
     background-image: linear-gradient(
         to right,
-        #ff512f 0%
-        #dd2476 51%
-        #ff512f 100%
+        #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
     );
     color: #fff;/*Button text color*/
     padding :12px;/*inner space*/
