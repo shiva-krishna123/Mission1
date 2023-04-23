@@ -3,7 +3,7 @@
     padding:0;
     box-sizing: border-box;/*To implement Box Model*/
 }
-/*Global Style*/
+/*Global Style */
 body{
     font-family:" Merriweather",sans-serif;
     background-color: #ebf2ff;/*Background colour for entire screen is white*/
@@ -23,6 +23,7 @@ body{
     border-radius: 6px;
     cursor: pointer;
 }
+/* Mobile Device*/
 .container{
     width: 100%;
     margin :0 auto;
@@ -83,11 +84,15 @@ body{
     padding: 20px;/* to provide space between content and image inside menu card*/
 }
 .explore_menu_view_more{
+    margin-top: 30px;
     display: flex;
     justify-content: center;
 }
+
 /* let us write media queries for tablet,pc and laptop screens*/
-@media(min-width:768px){
+/* For tablet device*/
+@media(min-width:768px)
+{
     .navbar{
         justify-content: space-between;
         padding : 10px 20px;/* top&bootom  left&right*/
@@ -106,8 +111,43 @@ body{
         justify-content: space-between;
         gap: 10px;
     }
+    .explore_menu_container{
+        position: relative;
+    }
+    .explore_menu_gradient_bg{
+        position: absolute;/* the width and height misbehave unless we specify left and top*/
+        left: 0;
+        top: 0;
+        /* now specify height and width*/
+        height: 100%;
+        width: 100%;
+        /* now add background*/
+        background-image: linear-gradient(
+            to right,
+            #ff512f 0%,
+            #dd2476 51%,
+            #ff512f 100%
+        );
+        /* to get the gradient behind the card for that we use -ve value for top of the card we use +ve value*/
+        /*Stacking*/
+        z-index: -3;
+        /* we want the diagonal shape for that we use a function in css an advance concept*/
+        /*transform*/
+        transform: skewY(-5deg);
+        
+    }
+    .explore_menu_lists{
+        margin-top: 50px;
+       display: flex;/* to want menu list side by side to one another*/
+       gap: 8px;
+    }
+    #pizza_card{
+        margin-top: -20px;/* negative is work for moving the pizza menu card to up*/ 
+        margin-bottom: 20px;
+     }
 
 }
+/* For laptop device*/
 @media(min-width:1020px){
     .container{
         max-width: 900px;
@@ -116,7 +156,17 @@ body{
     .hero_txt{
         font-size: 50px;;
     }
+    .explore_menu_lists{
+        gap:20px;/*Get some space between images*/
+        padding: 0 20px;/* we need only left and right space and not require space for top and bottom*/
+    }
+    /* now lets style the text*/
+    .explore_menu_text{
+        font-size: 50px;
+
+    }
 }
+/* For PC device*/
 @media(min-width:1200px)
 {
     .container{
