@@ -88,6 +88,39 @@ body{
     display: flex;
     justify-content: center;
 }
+/* Flex*/
+/* style text */
+.reasturant_description{
+    font-size: 30px;
+    font-weight: bold;/*Make bold*/
+    color: #1d3557;/*change text colour*/
+    margin: 20px 0;/* To create 20px space between image and content as well as button and content from top to bottom of size 20px*/
+    text-align: center;
+
+}
+.reasturant_flex_row_one,.reasturant_flex_row_two{
+    width: 100%;
+    display: flex;
+    gap: 4px;
+}/* if we have same properties for two classes then we can write them by using comma between them*/
+.reasturant_flex_row_one{
+    align-items: baseline;
+    margin-bottom: 4px;
+}
+.reasturant_1_image,.reasturant_2_image,
+.reasturant_3_image,.reasturant_4_image{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+.reasturant_1,.reasturant_4{
+    width: 100%;
+    height: 150px;
+}
+.reasturant_2,.reasturant_3{
+    width:120%;
+    height: 200px;
+}
 
 /* let us write media queries for tablet,pc and laptop screens*/
 /* For tablet device*/
@@ -145,6 +178,17 @@ body{
         margin-top: -20px;/* negative is work for moving the pizza menu card to up*/ 
         margin-bottom: 20px;
      }
+     .reasturant_description{
+        font-size: 38px; width: 100%;
+     }
+     .reasturant_container{
+        display: flex;/* for text and images in the same line*/
+        align-items: center;    
+    }
+    .reasturant_flex{
+        width: 100%;
+    }
+    
 
 }
 /* For laptop device*/
@@ -164,6 +208,9 @@ body{
     .explore_menu_text{
         font-size: 50px;
 
+    }
+    .reasturant_container{
+        margin-top: 30px;
     }
 }
 /* For PC device*/
